@@ -44,8 +44,8 @@ Before updating for inheritance, `TicTacToe` might have all members private. To 
 
 ```cpp
 class TicTacToe {
-protected:
     char board[3][3];       // 3x3 game board (unused in 3D but kept for compatibility)
+protected:
     char currentPlayer;     // 'X' or 'O'
     int emptyCells;        // Count of empty cells, decrements to zero
 
@@ -69,7 +69,8 @@ public:
 class TicTacToe3D : public TicTacToe {
     char board3D[3][3][3];    // 3x3x3 game board for 3D Tic-Tac-Toe
     int scoreX, scoreO;        // Scores for players X and O
-
+    
+    int calculateScore(int x, int y, int z); // Calculate score based on completed rows
 public:
     TicTacToe3D();             // Constructor to initialize the 3D game
     void displayBoard() override;     // Display the 3D board with ASCII art
@@ -77,7 +78,6 @@ public:
     void computerMove() override;     // Handle computer's move with 3D input
     bool makeMove(int x, int y, int z); // Attempt to make a move in 3D space
     bool checkWin() override;         // Override to announce the winner at the end
-    int calculateScore(int x, int y, int z); // Calculate score based on completed rows
 };
 ```
 ### Calculating Score
