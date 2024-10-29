@@ -47,7 +47,7 @@ class TicTacToe {
 protected:
     char board[3][3];       // 3x3 game board (unused in 3D but kept for compatibility)
     char currentPlayer;     // 'X' or 'O'
-    int filledCells;        // Count of filled cells, decrements to zero
+    int emptyCells;        // Count of empty cells, decrements to zero
 
 public:
     TicTacToe();            // Constructor to initialize the game
