@@ -19,16 +19,17 @@ To build our Tic-Tac-Toe game in C++, we need to design a class that represents 
 
 ```cpp
 class TicTacToe {
-    char board[3][3];      // The 3x3 game board
-    char currentPlayer;    // Tracks the current player ('X' or 'O')
+    char board[3][3];       // The 3x3 game board
+    char currentPlayer;     // Tracks the current player ('X' or 'O')
 public:
-    TicTacToe();                     // Constructor to initialize the game
-    void displayBoard();       // Displays the current state of the game board
-    void playerMove();         // Handles the player's move
-    void computerMove();   // Handles the computer's move
-    bool checkWin();            // Checks if a player has won the game
-    bool isFull();                   // Checks if the board is full (draw)
-    void switchPlayer();       // Switches between players ('X' and 'O')
+    TicTacToe();             // Constructor to initialize the game
+    void displayBoard();     // Displays the current state of the game board
+    void playerMove();       // Handles the player's move
+    void computerMove();     // Handles the computer's move
+    bool checkWin();         // Checks if a player has won the game
+    bool isFull();           // Checks if the board is full (draw)
+    void switchPlayer();     // Switches between players ('X' and 'O')
+    char getCurrentPlayer(); // Get current player
 };
 ```
 
