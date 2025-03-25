@@ -15,6 +15,13 @@ Before writing the Tic-Tac-Toe game in C++, it’s important to understand some 
 
 To build our Tic-Tac-Toe game in C++, we need to design a class that represents the game board and implements the game logic.
 
+```cpp
+#include <iostream>
+#include <cstdlib>
+#include <ctime>
+using namespace std;
+```
+
 ### Class Definition Template:
 
 ```cpp
@@ -92,7 +99,9 @@ int main() {
             game.computerMove();
         }
         game.displayBoard();
-        game.switchPlayer();
+         if (!game.checkWin()) {
+            game.switchPlayer();
+        }
     }
 
     if (game.checkWin()) {
